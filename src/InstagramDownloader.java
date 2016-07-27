@@ -16,11 +16,11 @@ public class InstagramDownloader {
         Scanner ip = new Scanner(System.in);
         System.out.print("Enter URL: ");
         String url = ip.nextLine();
-        System.out.print("Enter Targer Location: ");
+        System.out.print("Enter Target Location: ");
         String target = ip.nextLine();
         new InstagramDownloader(url,target);
     }
-    public void downloadImage(String link,String target) {
+    private void downloadImage(String link,String target) {
         try {
             URL url = new URL(link);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(url.openStream()));
